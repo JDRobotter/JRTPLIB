@@ -124,7 +124,7 @@ if (NOT MSVC OR JRTPLIB_COMPILE_STATIC)
 	add_library(jrtplib-static STATIC ${SOURCES} ${HEADERS})
 
   target_include_directories(jrtplib-static PUBLIC ./)
-  target_include_directories(jrtplib-static PUBLIC ./${PROJECT_BINARY_DIR}/src/)
+  target_include_directories(jrtplib-static PUBLIC ${PROJECT_BINARY_DIR}/src/)
 
 	if (NOT MSVC)
 		set_target_properties(jrtplib-static PROPERTIES OUTPUT_NAME jrtp)
