@@ -366,7 +366,7 @@ int RTPUDPv4Transmitter::Create(size_t maximumpacketsize,const RTPTransmissionPa
 
 			// create sockets
 			
-			rtpsock = socket(PF_INET,SOCK_DGRAM,0);
+			rtpsock = socket(PF_INET, SOCK_DGRAM | SOCK_NONBLOCK ,0);
 			if (rtpsock == RTPSOCKERR)
 			{
 				MAINMUTEX_UNLOCK
